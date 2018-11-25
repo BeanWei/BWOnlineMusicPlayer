@@ -2,51 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9aac8b5-bedb-4119-9907-5459659d25f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/BWOnlinePlayer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/MusicApiHandler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/MusicApiRespFormat.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Note.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/cache/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/css/jquery.mCustomScrollbar.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/css/player.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/css/small.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/images/album_cover_player.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/images/history.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/images/icon_list_menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/images/player.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/images/player_cover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/images/wave.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/js/ajax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/js/background-blur.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/js/functions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/js/jquery.mCustomScrollbar.concat.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/js/lyric.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/js/musicList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/js/player.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plugns/killie/img/360.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plugns/killie/img/chrome.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plugns/killie/img/firefox.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plugns/killie/img/opera.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plugns/killie/img/safari.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plugns/killie/img/top.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plugns/killie/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plugns/layer/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plugns/layer/mobile/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plugns/layer/mobile/need/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plugns/layer/skin/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plugns/layer/skin/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plugns/layer/skin/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plugns/layer/skin/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plugns/layer/skin/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/plugns/layer/skin/default/loading-2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,33 +48,59 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="go" value="1" />
+          <entry key="md" value="40" />
+          <entry key="txt" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Go" value="1" />
+          <entry key="Markdown" value="40" />
+          <entry key="PLAIN_TEXT" value="32" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="md" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Markdown" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
-              <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding>
                 <element signature="e#14#106#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="36">
+                <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -143,6 +126,7 @@
         <option value="$PROJECT_DIR$/controllers/MusicApiHandler.go" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -152,21 +136,20 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="960" />
-    <option name="width" value="960" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="919" />
+    <option name="width" value="1001" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,6 +161,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -185,7 +170,7 @@
     <property name="GO_FMT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543163806005" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543164823268" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -217,16 +202,54 @@
       <workItem from="1543136746152" duration="13690000" />
       <workItem from="1543163631107" duration="51000" />
       <workItem from="1543163719687" duration="347000" />
+      <workItem from="1543164076713" duration="745000" />
     </task>
+    <task id="LOCAL-00001" summary="🎷 BWOnlineMusicPlayer 📯">
+      <created>1543164226427</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1543164226427</updated>
+    </task>
+    <task id="LOCAL-00002" summary="🎷 BWOnlineMusicPlayer 📯">
+      <created>1543164242098</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1543164242098</updated>
+    </task>
+    <task id="LOCAL-00003" summary="🍭 响应处理">
+      <created>1543164300679</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1543164300679</updated>
+    </task>
+    <task id="LOCAL-00004" summary="🎸 前端UI">
+      <created>1543164359100</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1543164359100</updated>
+    </task>
+    <task id="LOCAL-00005" summary="🔥 Server入口">
+      <created>1543164419050</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1543164419050</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14088000" />
+    <option name="totallyTimeSpent" value="14833000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="919" y="0" width="1001" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.119936034" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.20999075" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -264,6 +287,13 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value=" BWOnlineMusicPlayer " />
+    <MESSAGE value=" 响应处理" />
+    <MESSAGE value=" 前端UI" />
+    <MESSAGE value=" Server入口" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Server入口" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -295,10 +325,20 @@
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="e#14#106#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="36">
+            <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

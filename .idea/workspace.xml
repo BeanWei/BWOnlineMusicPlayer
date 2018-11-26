@@ -90,7 +90,7 @@
           <entry key="go" value="375" />
           <entry key="html" value="40" />
           <entry key="js" value="295" />
-          <entry key="md" value="95" />
+          <entry key="md" value="98" />
           <entry key="txt" value="63" />
         </counts>
       </usages-collector>
@@ -99,7 +99,7 @@
           <entry key="Go" value="375" />
           <entry key="HTML" value="40" />
           <entry key="JavaScript" value="295" />
-          <entry key="Markdown" value="95" />
+          <entry key="Markdown" value="98" />
           <entry key="PLAIN_TEXT" value="63" />
         </counts>
       </usages-collector>
@@ -129,8 +129,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="171">
-                <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+              <first_editor relative-caret-position="190">
+                <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
               </first_editor>
               <second_editor />
             </state>
@@ -327,7 +327,7 @@
     <property name="GO_FMT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543215089792" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543215176211" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -360,7 +360,7 @@
       <workItem from="1543163631107" duration="51000" />
       <workItem from="1543163719687" duration="347000" />
       <workItem from="1543164076713" duration="745000" />
-      <workItem from="1543190980617" duration="17060000" />
+      <workItem from="1543190980617" duration="17146000" />
     </task>
     <task id="LOCAL-00001" summary="🎷 BWOnlineMusicPlayer 📯">
       <created>1543164226427</created>
@@ -446,11 +446,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543215001535</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary=":memo: 更新README">
+      <created>1543215094105</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1543215094105</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31893000" />
+    <option name="totallyTimeSpent" value="31979000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="334" y="30" width="1266" height="840" extended-state="0" />
@@ -606,8 +613,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="171">
-            <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+          <first_editor relative-caret-position="190">
+            <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
           </first_editor>
           <second_editor />
         </state>

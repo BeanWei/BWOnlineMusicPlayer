@@ -5,11 +5,15 @@ import (
 	"github.com/thedevsaddam/gojsonq"
 	"strconv"
 	"strings"
+
+	ms "github.com/BeanWei/MusicSpider"
 )
 
 /*
 基于 github.com/BeanWei/MusicSpider 下的 format.go, 根据此项目的需求进行第二次开发
 */
+
+/* 辅助工具函数 */
 
 func safeParse(jsonStr, path string) string {
 	strValue := ""
@@ -31,6 +35,15 @@ func safeParse(jsonStr, path string) string {
 		fmt.Println("此类型暂不支持转换为Str类型: ", textType)
 	}
 	return strValue
+}
+
+func getNeteasePicURL(id string) string {
+	//http://p3.music.126.net/[encrypted_song_id]/[song_dfsId].jpg
+	if id == "" {
+		return ""
+	}
+	encrypted_song_id := ms.NeteaseEncryptId(id)
+	return fmt.Sprintf("http://p3.music.126.net/%s/%s.jpg", encrypted_song_id, id)
 }
 
 /*===================Search Songs API Response Format==================================*/
@@ -396,8 +409,10 @@ func playlistFormat(site, jsonStr string) map[string]interface{} {
 			songs["album_id"] = safeParse(jsonStr, fmt.Sprintf("playlist.tracks.[%d].al.id", i))
 			songs["album_name"] = safeParse(jsonStr, fmt.Sprintf("playlist.tracks.[%d].al.name", i))
 			songs["url_id"] = songs["song_id"]
-			songs["pic_id"] = songs["song_id"]
 			songs["lyric_id"] = songs["song_id"]
+			songs["pic_id"] = songs["song_id"]
+			songs["song_coverImgUrl"] = getNeteasePicURL(songs["song_id"].(string))
+			songs["album_coverImgUrl"] = safeParse(jsonStr, fmt.Sprintf("playlist.tracks.[%d].al.picUrl", i))
 			songs["source_url"] = fmt.Sprintf("https://music.163.com/#/song?id=%s", songs["song_id"])
 			songslist = append(songslist, songs)
 		}
@@ -522,12 +537,13 @@ func songFormat(site, jsonStr string) map[string]interface{} {
 	case "netease":
 		songinfo["source"] = "netease"
 		songinfo["song_name"] = safeParse(jsonStr, "songs.[0].name")
-		songinfo["singer_id"] = safeParse(jsonStr, "songs.ar.[0].id")
-		songinfo["singer_name"] = safeParse(jsonStr, "songs.ar.[0].name")
-		songinfo["album_id"] = safeParse(jsonStr, "songs.al.id")
-		songinfo["album_name"] = safeParse(jsonStr, "songs.al.name")
-		songinfo["publish_time"] = safeParse(jsonStr, "songs.publishTime")
-		songinfo["cover_url"] = safeParse(jsonStr, "songs.al.picUrl")
+		songinfo["singer_id"] = safeParse(jsonStr, "songs.[0].ar.[0].id")
+		songinfo["singer_name"] = safeParse(jsonStr, "songs.[0].ar.[0].name")
+		songinfo["album_id"] = safeParse(jsonStr, "songs.[0].al.id")
+		songinfo["album_name"] = safeParse(jsonStr, "songs.[0].al.name")
+		songinfo["publish_time"] = safeParse(jsonStr, "songs.[0].publishTime")
+		//songinfo["song_coverImgUrl"]  = getNeteasePicURL(safeParse(jsonStr, "songs.[0].id"))
+		songinfo["cover_url"] = safeParse(jsonStr, "songs.[0].al.picUrl")
 		songinfo["source_url"] = fmt.Sprintf("https://music.163.com/#/song?id=%s", safeParse(jsonStr, "songs.[0].id"))
 
 	case "tencent":

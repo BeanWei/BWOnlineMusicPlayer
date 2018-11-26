@@ -307,14 +307,13 @@ function ajaxLyric(music, callback) {
         data: {"types": "lyric", "id": music.lyric_id, "source": music.source},
         dataType : "json",
         success: function(jsonData){
-            jsonData = jsonData.data
             // 调试信息输出
             if (mkPlayer.debug) {
                 console.debug("歌词获取成功");
             }
             
-            if (jsonData.lyric) {
-                callback(jsonData.lyric, music.lyric_id);    // 回调函数
+            if (jsonData.data) {
+                callback(jsonData.data, music.lyric_id);    // 回调函数
             } else {
                 callback('', music.lyric_id);    // 回调函数
             }

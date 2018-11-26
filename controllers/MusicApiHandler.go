@@ -24,12 +24,18 @@ func MusicApiHandler(c *gin.Context) {
 	case "pic":
 		id := c.PostForm("id")
 		source := c.PostForm("source")
-		c.JSON(200, gin.H{"url": songFormat(source, ms.Song(source, id)["result"])["cover_url"]})
+		songinfo := songFormat(source, ms.Song(source, id)["result"])
+		c.JSON(200, gin.H{"url": songinfo["cover_url"]})
 	case "playlist":
 		lid := c.PostForm("lid")
 		source := c.PostForm("source")
 		r := ms.Playlist(source, lid)
 		c.JSON(200, gin.H{"data": playlistFormat(source, r["result"])})
+	case "song":
+		id := c.PostForm("id")
+		source := c.PostForm("source")
+		r := ms.Song(source, id)
+		c.JSON(200, gin.H{"data": songFormat(source, r["result"])})
 	case "lyric":
 		id := c.PostForm("id")
 		source := c.PostForm("source")

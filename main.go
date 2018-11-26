@@ -17,13 +17,18 @@ func main() {
 	router.Use(common.CORSMiddleware())
 
 	// 静态文件
-	router.LoadHTMLFiles("templates/index.html")
+	router.LoadHTMLGlob("templates/*")
 	router.Static("/static", "./static")
 	router.Static("/images", "./static/images")
 
 	// 请求
 	router.GET("/player", func(c *gin.Context) {
 		c.HTML(200, "index.html", nil)
+	})
+
+	// 错误处理
+	router.NoRoute(func(c *gin.Context) {
+		c.HTML(404, "404.html", nil)
 	})
 
 	// api group v1

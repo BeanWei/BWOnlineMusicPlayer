@@ -5,9 +5,9 @@
 
 ## 🌞 Screenshots
 <div>
-    <img src='./Screenshots/homelist.PNG' width=300>
-    <img src='./Screenshots/playlist.PNG' width=300>
-    <img src='./Screenshots/searchview.PNG' width=300>
+    <img src='./Screenshots/homelist.PNG' width=450>
+    <img src='./Screenshots/playlist.PNG' width=450>
+    <img src='./Screenshots/searchview.PNG' width=450>
 </div>
 
 ## LICENSE

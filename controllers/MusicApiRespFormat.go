@@ -374,11 +374,11 @@ func playlistFormat(site, jsonStr string) map[string]interface{} {
 		playlist["brief_desc"] = safeParse(jsonStr, "playlist.description")
 		tagsStr := ""
 		for i := 0; i >= 0; i++ {
-			tag := safeParse(jsonStr, fmt.Sprintf("playlist.tags.[%d]", i)) + ","
+			tag := safeParse(jsonStr, fmt.Sprintf("playlist.tags.[%d]", i))
 			if tag == "" {
 				break
 			}
-			tagsStr += tag
+			tagsStr += tag + ","
 		}
 		playlist["tags"] = strings.TrimRight(tagsStr, ",")
 		playlist["creat_time"] = safeParse(jsonStr, "playlist.createTime")
@@ -393,6 +393,8 @@ func playlistFormat(site, jsonStr string) map[string]interface{} {
 			songs["song_name"] = safeParse(jsonStr, fmt.Sprintf("playlist.tracks.[%d].name", i))
 			songs["artist_id"] = safeParse(jsonStr, fmt.Sprintf("playlist.tracks.[%d].ar.[0].id", i))
 			songs["artist_name"] = safeParse(jsonStr, fmt.Sprintf("playlist.tracks.[%d].ar.[0].name", i))
+			songs["album_id"] = safeParse(jsonStr, fmt.Sprintf("playlist.tracks.[%d].al.id", i))
+			songs["album_name"] = safeParse(jsonStr, fmt.Sprintf("playlist.tracks.[%d].al.name", i))
 			songs["url_id"] = songs["song_id"]
 			songs["pic_id"] = songs["song_id"]
 			songs["lyric_id"] = songs["song_id"]
@@ -409,11 +411,11 @@ func playlistFormat(site, jsonStr string) map[string]interface{} {
 		playlist["brief_desc"] = safeParse(jsonStr, "data.cdlist.desc")
 		tagsStr := ""
 		for i := 0; i >= 0; i++ {
-			tag := safeParse(jsonStr, fmt.Sprintf("data.cdlist.tags.[%d].name", i)) + ","
+			tag := safeParse(jsonStr, fmt.Sprintf("data.cdlist.tags.[%d].name", i))
 			if tag == "" {
 				break
 			}
-			tagsStr += tag
+			tagsStr += tag + ","
 		}
 		playlist["tags"] = strings.TrimRight(tagsStr, ",")
 		playlist["creat_time"] = safeParse(jsonStr, "data.cdlist.ctime")
@@ -428,6 +430,8 @@ func playlistFormat(site, jsonStr string) map[string]interface{} {
 			songs["song_name"] = safeParse(jsonStr, fmt.Sprintf("data.cdlist.songlist.[%d].name", i))
 			songs["artist_id"] = safeParse(jsonStr, fmt.Sprintf("data.cdlist.songlist.[%d].singer.mid", i))
 			songs["artist_name"] = safeParse(jsonStr, fmt.Sprintf("data.cdlist.songlist.[%d].singer.name", i))
+			songs["album_id"] = safeParse(jsonStr, fmt.Sprintf("data.cdlist.songlist.[%d].album.id", i))
+			songs["album_name"] = safeParse(jsonStr, fmt.Sprintf("data.cdlist.songlist.[%d].album.name", i))
 			songs["url_id"] = songs["song_id"]
 			songs["pic_id"] = songs["song_id"]
 			songs["lyric_id"] = songs["song_id"]
@@ -458,6 +462,8 @@ func playlistFormat(site, jsonStr string) map[string]interface{} {
 			songs["song_name"] = safeParse(jsonStr, fmt.Sprintf("data.info.[%d].filename", i))
 			songs["artist_id"] = ""
 			songs["artist_name"] = strings.Split(songs["song_name"].(string), " - ")[0]
+			songs["album_id"] = safeParse(jsonStr, fmt.Sprintf("data.info.[%d].album_id", i))
+			songs["album_name"] = safeParse(jsonStr, fmt.Sprintf("data.info.[%d].remark", i))
 			songs["url_id"] = songs["song_id"]
 			songs["pic_id"] = songs["song_id"]
 			songs["lyric_id"] = songs["song_id"]
@@ -485,6 +491,8 @@ func playlistFormat(site, jsonStr string) map[string]interface{} {
 			songs["song_name"] = safeParse(jsonStr, fmt.Sprintf("content.[%d].title", i))
 			songs["artist_id"] = ""
 			songs["artist_name"] = safeParse(jsonStr, fmt.Sprintf("content.[%d].author", i))
+			songs["album_id"] = safeParse(jsonStr, fmt.Sprintf("content.[%d].album_id", i))
+			songs["album_name"] = safeParse(jsonStr, fmt.Sprintf("content.[%d].album_title", i))
 			songs["url_id"] = songs["song_id"]
 			songs["pic_id"] = songs["song_id"]
 			songs["lyric_id"] = songs["song_id"]
@@ -516,6 +524,8 @@ func songFormat(site, jsonStr string) map[string]interface{} {
 		songinfo["song_name"] = safeParse(jsonStr, "songs.[0].name")
 		songinfo["singer_id"] = safeParse(jsonStr, "songs.ar.[0].id")
 		songinfo["singer_name"] = safeParse(jsonStr, "songs.ar.[0].name")
+		songinfo["album_id"] = safeParse(jsonStr, "songs.al.id")
+		songinfo["album_name"] = safeParse(jsonStr, "songs.al.name")
 		songinfo["publish_time"] = safeParse(jsonStr, "songs.publishTime")
 		songinfo["cover_url"] = safeParse(jsonStr, "songs.al.picUrl")
 		songinfo["source_url"] = fmt.Sprintf("https://music.163.com/#/song?id=%s", safeParse(jsonStr, "songs.[0].id"))
@@ -525,6 +535,8 @@ func songFormat(site, jsonStr string) map[string]interface{} {
 		songinfo["song_name"] = safeParse(jsonStr, "data.[0].name")
 		songinfo["singer_id"] = safeParse(jsonStr, "data.singer.[0].id")
 		songinfo["singer_name"] = safeParse(jsonStr, "data.singer.[0].name")
+		songinfo["album_id"] = safeParse(jsonStr, "data.album.id")
+		songinfo["album_name"] = safeParse(jsonStr, "data.album.name")
 		songinfo["publish_time"] = safeParse(jsonStr, "data.[0].time_public")
 		songinfo["cover_url"] = fmt.Sprintf("https://y.gtimg.cn/music/photo_new/T002R300x300M000%s.jpg?max_age=2592000", safeParse(jsonStr, "data.[0].mid"))
 		songinfo["source_url"] = fmt.Sprintf("https://y.qq.com/n/yqq/song/%s.html", safeParse(jsonStr, "data.[0].mid"))
@@ -533,6 +545,8 @@ func songFormat(site, jsonStr string) map[string]interface{} {
 		songinfo["song_name"] = safeParse(jsonStr, "data.trackList.[0].songName")
 		songinfo["singer_id"] = safeParse(jsonStr, "data.trackList.[0].artistId")
 		songinfo["singer_name"] = safeParse(jsonStr, "data.trackList.[0].singers")
+		songinfo["album_id"] = safeParse(jsonStr, "data.trackList.[0].album_id")
+		songinfo["album_name"] = safeParse(jsonStr, "data.trackList.[0].album_name")
 		songinfo["publish_time"] = safeParse(jsonStr, "data.trackList.[0].demoCreateTime")
 		songinfo["cover_url"] = safeParse(jsonStr, "data.trackList.[0].pic")
 		songinfo["source_url"] = fmt.Sprintf("https://www.xiami.com/song/%s", safeParse(jsonStr, "data.trackList.[0].songId"))
@@ -541,6 +555,8 @@ func songFormat(site, jsonStr string) map[string]interface{} {
 		songinfo["song_name"] = safeParse(jsonStr, "songName")
 		songinfo["singer_id"] = safeParse(jsonStr, "singerId")
 		songinfo["singer_name"] = safeParse(jsonStr, "choricSinger")
+		songinfo["album_id"] = safeParse(jsonStr, "albumid")
+		songinfo["album_name"] = ""
 		songinfo["publish_time"] = ""
 		songinfo["cover_url"] = safeParse(jsonStr, "imgUrl")
 		songinfo["source_url"] = fmt.Sprintf("http://www.kugou.com/song/#hash=%s", safeParse(jsonStr, "hash"))
@@ -549,6 +565,8 @@ func songFormat(site, jsonStr string) map[string]interface{} {
 		songinfo["song_name"] = safeParse(jsonStr, "songinfo.title")
 		songinfo["singer_id"] = safeParse(jsonStr, "songinfo.artist_id")
 		songinfo["singer_name"] = safeParse(jsonStr, "songinfo.author")
+		songinfo["album_id"] = safeParse(jsonStr, "songinfo.album_id")
+		songinfo["album_name"] = safeParse(jsonStr, "songinfo.album_title")
 		songinfo["publish_time"] = safeParse(jsonStr, "songinfo.publishtime")
 		songinfo["cover_url"] = safeParse(jsonStr, "songinfo.pic_huge")
 		songinfo["source_url"] = fmt.Sprintf("http://music.taihe.com/song/%s", safeParse(jsonStr, "songinfo.song_id"))
